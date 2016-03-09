@@ -2,7 +2,7 @@
   "name": "thekevjames-ngrok",
   "version": "1.0.0",
   "author": "thekevjames",
-  "summary": "Neovim management",
+  "summary": "Ngrok management",
   "license": "Apache-2.0",
   "source": "https://github.com/TheKevJames/puppet-ngrok",
   "project_page": "https://github.com/TheKevJames/puppet-ngrok",
