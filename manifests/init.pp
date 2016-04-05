@@ -1,3 +1,4 @@
+# Install and configure ngrok.
 class ngrok($dependencies, $home, $token, $url) {
 
   ensure_packages($dependencies, { ensure => latest })
