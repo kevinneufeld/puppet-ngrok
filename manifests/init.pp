@@ -22,8 +22,11 @@ class ngrok($dependencies, $home, $token, $url) {
     ensure => link,
     target => '/opt/ngrok',
   }
-
-  file { "${home}/.config/ngrok": ensure => directory } ->
+  # http://www.ryanwright.me/cookbook/puppet/type/file
+  # puppet does not automatically create parent direcoty.
+  file {["${home}/.config", "${home}/.config/ngrok"]: 
+    ensure => directory,
+  } ->
   file { "${home}/.config/ngrok/config.yml":
     ensure  => present,
     content => template('ngrok/config.erb'),
